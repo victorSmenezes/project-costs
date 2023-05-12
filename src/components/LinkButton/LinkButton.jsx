@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
+
 import { Button } from './styles'
 
 function LinkButton({to, text}) {
     return (
-        <Button>
-            <Link to={to}>
+        
+            <Button to={to}>
                 {text}
-            </Link>
-        </Button>
+            </Button>
+        
     )
 }
 
