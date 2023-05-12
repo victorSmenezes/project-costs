@@ -1,16 +1,7 @@
+import { Button } from './styles';
 
-import { Button } from './styles'
-
-function LinkButton({to, text}) {
-    return (
-        
-            <Button to={to}>
-                {text}
-            </Button>
-        
-    )
+function LinkButton({ to, text }) {
+  return <Button to={to}>{text}</Button>;
 }
 
-LinkButton.propTypes;
-
-export default LinkButton
+export default LinkButton;
