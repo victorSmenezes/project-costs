@@ -6,7 +6,13 @@ export const NewProjectContainer = styled.div`
     padding: 3em;
 
     h1{
+        margin-bottom: 0.1em;
+    }
+
+    hr{
         margin-bottom: 0.5em;
+        border: #222 solid 1.8px;
+        border-radius: 2px;
     }
 
     p{

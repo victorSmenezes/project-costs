@@ -5,11 +5,16 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "Standard",
+        "airbnb",
         "plugin:react-hooks/recommended",
         "plugin:prettier/recommended"
     ],
-    "overrides": [],
+    "eslint linebreak-style": [
+        "error",
+        "windows"
+    ],
+    "overrides": [
+    ],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -45,9 +50,7 @@
                     "module",
                     "/^@shared/",
                     [
-                        "parent",
-                        "sibling",
-                        "index"
+                        "parent", "sibling","index"
                     ]
                 ],
                 "alphabetize": {
