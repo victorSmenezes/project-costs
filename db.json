@@ -1,5 +1,180 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "name": "Teste 1",
+      "budget": "12500",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "name": "Meu time",
+      "budget": "2340",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "Teste25",
+      "budget": "2335",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "aaaa",
+      "budget": "22",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 4
+    },
+    {
+      "name": "12",
+      "budget": "1",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 5
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 6
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 9
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 10
+    },
+    {
+      "name": "12",
+      "budget": "12",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 11
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 12
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 13
+    },
+    {
+      "name": "a",
+      "budget": "1313",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 14
+    },
+    {
+      "name": "aaa",
+      "budget": "1233",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 15
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 16
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 17
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 18
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 19
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 20
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 21
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 22
+    },
+    {
+      "cost": 0,
+      "services": [],
+      "id": 23
+    },
+    {
+      "name": "as",
+      "budget": "2323",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 24
+    }
+  ],
   "categories": [
     {
       "id": 1,
