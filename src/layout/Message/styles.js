@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const BoxOfMessage = styled.div`
-  width: 15%;
+  width: 18%;
   padding: 1em;
   border: 1px solid #000;
   margin: 0 auto;

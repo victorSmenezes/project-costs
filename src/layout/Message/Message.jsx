@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { BoxOfMessage } from './styles'
 
-function Message({type, msg}) {
+function Message({ type, msg }) {
 
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-
-    if(!msg) {
+    if (!msg) {
       setVisible(false)
       return
     }
@@ -15,18 +14,18 @@ function Message({type, msg}) {
     setVisible(true)
 
     const timer = setTimeout(() => {
-      
       setVisible(false)
     }, 3000)
 
     return () => clearTimeout(timer)
   }, [msg])
 
+
   return (
     <>
-    {visible && (
-    <BoxOfMessage type={type}>{msg}</BoxOfMessage>
-    )} 
+      {visible && (
+        <BoxOfMessage type={type}>{msg}</BoxOfMessage>
+      )}
     </>
   )
 }

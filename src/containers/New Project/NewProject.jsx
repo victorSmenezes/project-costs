@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, } from "react-router-dom";
 import ProjectForm from '../../components/Project/ProjectForm';
 import { NewProjectContainer } from './styles';
 
 function NewProject() {
-
   const navigate = useNavigate()
 
   function createPost(project) {
@@ -22,10 +21,8 @@ function NewProject() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
         //redirect
-        navigate('/projects', { message: 'Projeto criado com sucesso!' })
-
+        navigate('/projects', {state: { message: 'Projeto criado com sucesso!' }})
       })
       .catch((err) => console.log(err))
 
