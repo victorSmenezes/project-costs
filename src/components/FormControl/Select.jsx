@@ -9,7 +9,7 @@ export default function Select ({ text, name, options, handleOnChange, value}){
       id={name} 
       onChange={handleOnChange} 
       value={value || ''}
-      >
+      required>
         <option>Selecione uma opção</option>
         {options.map ((option)=>(
           <option value={option.id} key={option.id}>{option.name}</option>
