@@ -5,15 +5,21 @@ import styled, { css } from 'styled-components';
 export const Content = styled.section`
   width: 1200px;
   display: flex;
-  margin: 0 auto;
+  margin: 2.5% auto;
   
 `
 
 export const ContainerStart = styled.div`
-  width: 100%;
-  justify-content: space-between;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
+	
+`
+export const NoProjects = styled.p`
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 464px;
+  
 `
 
 export const ProjectContainer = styled.div`
@@ -37,7 +43,7 @@ export const Cards = styled.div`
   border: 1px solid #7a7a7a;
   border-radius: 5px;
   width: 24%;
-  margin: 0.8%;
+  margin: 0.5%;
   -webkit-box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.9);
   -moz-box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.9);
   box-shadow: 0px 6px 14px -8px rgba(0,0,0,0.9);

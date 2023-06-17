@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NewProjectContainer = styled.div`
     width: 450px;
-    margin: 0 auto;
+    margin: 3% auto;
     padding: 3em;
 
     h1{

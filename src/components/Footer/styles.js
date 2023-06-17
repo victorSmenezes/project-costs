@@ -5,6 +5,7 @@ export const Container = styled.footer`
     color: #FFF;
     padding: 3em;
     text-align: center;
+    margin-top: 2.5em;
 `
 
 export const SocialList = styled.ul`

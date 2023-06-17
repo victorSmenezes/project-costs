@@ -8,6 +8,7 @@ export const HomeContainer = styled.section`
     align-items: center;
     justify-content: center;
     padding: 4em;
+    margin: 2.5% auto;
 
     h1{
         font-size: 2.5em;
