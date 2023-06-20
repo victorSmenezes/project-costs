@@ -1,33 +1,26 @@
-import { useEffect, useState } from 'react'
-import { BoxOfMessage } from './styles'
+import { useEffect, useState } from 'react';
+
+import { BoxOfMessage } from './styles';
 
 function Message({ type, msg }) {
-
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (!msg) {
-      setVisible(false)
-      return
+      setVisible(false);
+      return;
     }
 
-    setVisible(true)
+    setVisible(true);
 
     const timer = setTimeout(() => {
-      setVisible(false)
-    }, 3000)
+      setVisible(false);
+    }, 3000);
 
-    return () => clearTimeout(timer)
-  }, [msg])
+    return () => clearTimeout(timer);
+  }, [msg]);
 
-
-  return (
-    <>
-      {visible && (
-        <BoxOfMessage type={type}>{msg}</BoxOfMessage>
-      )}
-    </>
-  )
+  return <>{visible && <BoxOfMessage type={type}>{msg}</BoxOfMessage>}</>;
 }
 
-export default Message
+export default Message;

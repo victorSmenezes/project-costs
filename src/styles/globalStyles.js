@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 
@@ -11,7 +11,7 @@ export default createGlobalStyle`
 
     html, body, #root{
         background-color: #EFEFEF;
-        height: 100%;
+        height: 100vh;
     }
 
-`
+`;

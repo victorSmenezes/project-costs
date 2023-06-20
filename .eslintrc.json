@@ -9,10 +9,6 @@
         "plugin:react-hooks/recommended",
         "plugin:prettier/recommended"
     ],
-    "eslint linebreak-style": [
-        "error",
-        "windows"
-    ],
     "overrides": [
     ],
     "parserOptions": {
@@ -25,9 +21,25 @@
         "eslint-plugin-import-helpers"
     ],
     "rules": {
+        "import/prefer-default-export": "off",
+        "no-console": "off",
+        "react/jsx-no-bind": "off",
+        "no-unused-vars": ["error", { 
+        "vars": "local", 
+        "args": "none", 
+        "ignoreRestSiblings": true 
+        }
+        ],
+        "react/button-has-type": "off",
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
         "prettier/prettier": [
             "error",
             {
+                "printWidth": 80,
+                "tabWidth": 2,
                 "singleQuote": true,
                 "trailingComma": "none",
                 "arrowParens": "always",

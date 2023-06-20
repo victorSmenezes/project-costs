@@ -9,7 +9,6 @@ export const Button = styled(Link)`
   transition: 0.5s;
   border: none;
   border-radius: 2px;
-  color: #fff;
   text-decoration: none;
 
   &:hover {

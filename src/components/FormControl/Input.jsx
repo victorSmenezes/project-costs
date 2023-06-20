@@ -1,19 +1,19 @@
-import { FormControl } from "./styles";
+import { FormControl } from './styles';
 
-function Input({ type, text, name, placeholder, handleOnChange, value}){
-  return(
+function Input({ type, text, name, placeholder, handleOnChange, value }) {
+  return (
     <FormControl>
       <label htmlFor={name}>{text}</label>
-      <input 
-      type={type} 
-      name={name} 
-      id={name} 
-      placeholder={placeholder} 
-      onChange={handleOnChange} 
-      value={value}
+      <input
+        type={type}
+        name={name}
+        id={name}
+        placeholder={placeholder}
+        onChange={handleOnChange}
+        value={value}
       />
     </FormControl>
-  )
+  );
 }
 
-export default Input
+export default Input;
