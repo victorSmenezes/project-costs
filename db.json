@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "testtt",
-      "budget": "22",
+      "budget": "220",
       "category": {
         "id": "3",
         "name": "Design"
@@ -15,8 +15,8 @@
       "name": "AATest",
       "budget": "6614",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 1250,
       "services": [
@@ -36,16 +36,23 @@
         "name": "Desenvolvimento"
       },
       "budget": "201",
-      "cost": 0,
-      "services": [],
+      "cost": 120,
+      "services": [
+        {
+          "name": "Teste de serviço",
+          "cost": "120",
+          "description": "Atividades atribuídas de que fornecerá novos serviços",
+          "id": "a724fb9f-c2b8-4845-9cbb-c600698f6d2d"
+        }
+      ],
       "id": 8
     },
     {
       "name": "Testet",
       "budget": "355",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": [],
