@@ -1,8 +1,15 @@
+import { useEffect, useState } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 import { Container, CopyRight, SocialList } from './styles';
 
 function Footer() {
+  const [currentYear, setCurrentYear] = useState('');
+
+  useEffect((_) => {
+    const year = new Date().getFullYear();
+    setCurrentYear(year.toString());
+  }, []);
   return (
     <Container>
       <SocialList>
@@ -17,7 +24,7 @@ function Footer() {
         </li>
       </SocialList>
       <CopyRight>
-        <span>Costs</span> &copy; 2023
+        <span>Costs</span> &copy; {currentYear}
       </CopyRight>
     </Container>
   );

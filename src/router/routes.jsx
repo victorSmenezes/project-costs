@@ -6,6 +6,7 @@ import Home from '../containers/Home/Home';
 import NewProject from '../containers/New Project/NewProject';
 import ProjectEdit from '../containers/ProjectEdit/ProjectEdit';
 import Projects from '../containers/Projects/Projects';
+// eslint-disable-next-line import/no-unresolved
 import DefaultLayout from '../layout/Defaultlayout';
 
 function Router() {

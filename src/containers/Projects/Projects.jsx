@@ -69,18 +69,16 @@ function Projects() {
 
         <ContainerStart>
           {projects.length > 0 &&
-            projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.id}
-                  id={project.id}
-                  name={project.name}
-                  budget={project.budget}
-                  category={project.category.name}
-                  handleRemove={removeProject}
-                />
-              );
-            })}
+            projects.map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                name={project.name}
+                budget={project.budget}
+                category={project.category.name}
+                handleRemove={removeProject}
+              />
+            ))}
 
           {!removeLoading && <Loading />}
           {removeLoading && projects.length === 0 && (

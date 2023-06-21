@@ -11,6 +11,7 @@ import Message from '../../layout/Message/Message';
 import {
   Button,
   Container,
+  ContainerServices,
   DetailsContainer,
   ProjectDetails,
   ProjectInfo,
@@ -109,7 +110,34 @@ export default function ProjectEdit() {
       .catch((err) => console.log(err));
   }
 
-  function removeService() {}
+  function removeService(id, cost) {
+    const serviceUpdated = project.services.filter(
+      (service) => service.id !== id
+    );
+
+    const projectUpdated = project;
+
+    projectUpdated.services = serviceUpdated;
+
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
+
+    setMessage('');
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(projectUpdated)
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(projectUpdated);
+        setServices(serviceUpdated);
+        setMessage('Serviço removido com Sucesso!');
+        setType('Success');
+      })
+      .catch((err) => console.log(err));
+  }
 
   function toggleProjectForm() {
     setShowProjectForm(!showProjectForm);
@@ -169,7 +197,7 @@ export default function ProjectEdit() {
             </ServiceFormContainer>
 
             <h2>Serviços</h2>
-            <Container>
+            <ContainerServices>
               {services.length > 0 &&
                 services.map((service) => (
                   <ServiceCard
@@ -183,7 +211,7 @@ export default function ProjectEdit() {
                 ))}
 
               {services.length === 0 && <p>Não há serviços cadastrados.</p>}
-            </Container>
+            </ContainerServices>
           </Container>
         </ProjectDetails>
       ) : (

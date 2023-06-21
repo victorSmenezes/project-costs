@@ -67,3 +67,11 @@ export const Button = styled.button`
 export const ProjectInfo = styled.div`
   width: 100%;
 `;
+
+export const ContainerServices = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 330px;
+  overflow-y: scroll;
+`;

@@ -1,4 +1,4 @@
-import { BsFillTrashFill } from 'react-icons/bs';
+import { BsFillTrashFill, BsPencil } from 'react-icons/bs';
 
 import { ActionsCards, Cards } from '../../containers/Projects/styles';
 
@@ -9,7 +9,10 @@ export default function ServiceCard({
   description,
   handleRemove
 }) {
-  const remove = (e) => {};
+  const remove = (e) => {
+    e.preventDefault();
+    handleRemove(id, cost);
+  };
 
   return (
     <Cards>
@@ -20,6 +23,14 @@ export default function ServiceCard({
 
       <p>{description}</p>
       <ActionsCards>
+        {/*     <button>
+          {/* <Link to={`/project/${id}`}> 
+          <BsPencil />
+          Editar
+          {/*  </Link> 
+        </button>
+        */}
+
         <button onClick={remove}>
           <BsFillTrashFill />
           Excluir

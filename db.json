@@ -12,128 +12,22 @@
       "id": 1
     },
     {
-      "name": "Agora foi",
-      "budget": "222",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 222,
-      "services": [
-        {
-          "cost": "122",
-          "name": "teste de serviço",
-          "description": "Um novo serviço",
-          "id": "444aa396-87fb-491f-a89b-f58f49ed568f"
-        },
-        {
-          "cost": "22",
-          "name": "teste de serviço",
-          "description": "Um novo serviço",
-          "id": "297dbc98-e84f-4743-bc84-1322c5c12331"
-        },
-        {
-          "cost": "1",
-          "name": "teste de serviço",
-          "description": "Um novo serviço",
-          "id": "e0d54932-e17e-4397-8b1e-b1c96a06c1c2"
-        },
-        {
-          "cost": "1",
-          "name": "teste de serviçoa",
-          "description": "Um novo serviço",
-          "id": "c88bfc50-6372-45b2-a36e-94437c8a318c"
-        },
-        {
-          "name": "Victor",
-          "cost": "20",
-          "description": "Um novo serviço",
-          "id": "acc06675-f48a-4271-ab4d-67d5cfc4c515"
-        },
-        {
-          "name": "Test",
-          "cost": "22",
-          "description": "Um novo serviço",
-          "id": "2e1720c9-7c19-4758-9af0-13be2b7aa733"
-        },
-        {
-          "name": "Me contratar como o dev Reactjs",
-          "cost": "2",
-          "description": "Atividades atribuídas de um desenvolvedor Front end",
-          "id": "cb79607e-d913-404c-9c58-de6f2df1a2bf"
-        },
-        {
-          "name": "123",
-          "cost": "2",
-          "description": "Atividades atribuídas de um desenvolvedor Front end",
-          "id": "f8874eaf-85fe-4a11-b740-6b522b1074b9"
-        },
-        {
-          "name": "123",
-          "cost": "2",
-          "description": "Atividades atribuídas de um desenvolvedor Front end",
-          "id": "f4e42f32-e2bc-412f-b2ca-096c870ef0b1"
-        },
-        {
-          "name": "13",
-          "cost": "2",
-          "description": "Atividades atribuídas de um desenvolvedor Front end",
-          "id": "648609ec-7e22-4643-89d7-bd761934a687"
-        },
-        {
-          "name": "osh",
-          "cost": "2",
-          "description": "Atividades atribuídas de um desenvolvedor Front end",
-          "id": "2ecc17fb-d4d8-4f6a-b8bb-e6918bf6d412"
-        },
-        {
-          "name": "cabo",
-          "cost": "1",
-          "description": "Um novo serviço1",
-          "id": "2f66feca-53fa-443d-b8d5-3a7d2d4bbeeb"
-        }
-      ],
-      "id": 2
-    },
-    {
       "name": "AATest",
       "budget": "6614",
       "category": {
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
-      "id": 4
-    },
-    {
-      "name": "Victor",
-      "budget": "12",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 10,
+      "cost": 1250,
       "services": [
         {
-          "name": "Design UX/UI",
-          "cost": "10",
+          "name": "Ux/Ui",
+          "cost": "1250",
           "description": "Fazer o layout",
-          "id": "b19a08ae-9ab1-4e1c-bdbc-6e999424f482"
+          "id": "4f4da873-b592-4afd-8959-4cf1282c7845"
         }
       ],
-      "id": 6
-    },
-    {
-      "name": "22",
-      "budget": "22",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 7
+      "id": 4
     },
     {
       "name": "TProjects",
@@ -147,28 +41,6 @@
       "id": 8
     },
     {
-      "name": "434",
-      "budget": "1222",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "name": "Testtt",
-      "budget": "22",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 10
-    },
-    {
       "name": "Testet",
       "budget": "355",
       "category": {
@@ -180,17 +52,6 @@
       "id": 11
     },
     {
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "name": "asda",
-      "budget": "123",
-      "cost": 0,
-      "services": [],
-      "id": 12
-    },
-    {
       "name": "Teste 1223",
       "budget": "1266",
       "category": {
@@ -200,6 +61,17 @@
       "cost": 0,
       "services": [],
       "id": 13
+    },
+    {
+      "name": "Projeto 45",
+      "budget": "12500",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 14
     }
   ],
   "categories": [
