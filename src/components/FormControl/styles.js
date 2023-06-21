@@ -26,7 +26,7 @@ export const FormControl = styled.div`
 
 export const Button = styled.button`
   background-color: #222;
-  width: 118px;
+  width: 150px;
   font-size: 14px;
   color: #fff;
   padding: 0.7em 1.2em;

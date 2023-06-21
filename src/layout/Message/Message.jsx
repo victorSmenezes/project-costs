@@ -20,7 +20,12 @@ function Message({ type, msg }) {
     return () => clearTimeout(timer);
   }, [msg]);
 
-  return <>{visible && <BoxOfMessage type={type}>{msg}</BoxOfMessage>}</>;
+  return (
+    <>
+      {visible && <BoxOfMessage type={type}>{msg}</BoxOfMessage>}
+      {/* */}
+    </>
+  );
 }
 
 export default Message;

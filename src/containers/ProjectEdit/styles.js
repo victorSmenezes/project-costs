@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const ProjectDetails = styled.div`
   padding: 2em;
+  position: relative;
 
   h1,
   h2,
@@ -19,6 +20,7 @@ export const ProjectDetails = styled.div`
 
   h1 {
     background-color: #222;
+    border-radius: 2px;
     color: #ffbb33;
     padding: 0.4em;
   }
