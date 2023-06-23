@@ -35,7 +35,7 @@
         ],
         "react/button-has-type": "off",
         "linebreak-style": [
-            "error",
+            "off",
             "windows"
         ],
         "prettier/prettier": [
