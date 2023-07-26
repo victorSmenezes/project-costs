@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import api from '../../services/api';
 import Input from '../FormControl/Input';
 import Select from '../FormControl/Select';
 import SubmitButton from '../FormControl/SubmitButton';
@@ -10,15 +11,10 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [project, setProject] = useState(projectData || {});
 
   useEffect(() => {
-    fetch('http://localhost:5000/categories', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setCategories(data);
+    api
+      .get('/categories')
+      .then((resp) => {
+        setCategories(resp.data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -62,13 +58,15 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         value={project.budget ? project.budget : ''}
       />
 
-      <Select
-        name="category_id"
-        text="Selecione a categoria"
-        options={categories}
-        handleOnChange={handleCategory}
-        value={project.category ? project.category.id : ''}
-      />
+      {setCategories && (
+        <Select
+          name="category_id"
+          text="Selecione a categoria"
+          options={categories}
+          handleOnChange={handleCategory}
+          value={project.category ? project.category.id : ''}
+        />
+      )}
 
       <SubmitButton text={btnText} />
     </Form>
