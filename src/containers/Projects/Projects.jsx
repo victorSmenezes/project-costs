@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Loading from '../../layout/Loading/Loading';
 import Message from '../../layout/Message/Message';
+import api from '../../services/api';
 import ProjectCard from './ProjectCard';
 import {
   ContainerStart,
@@ -26,15 +27,10 @@ function Projects() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/projects', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then((resp) => resp.json())
-        .then((data) => {
-          setProjects(data);
+      api
+        .get('/projects')
+        .then((resp) => {
+          setProjects(resp.data);
           setRemoveLoading(true);
         })
         .catch((err) => console.log(err));
@@ -42,15 +38,11 @@ function Projects() {
   }, []);
 
   function removeProject(id) {
-    fetch(`http://localhost:5000/projects/${id}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((resp) => resp.json())
-      .then(() => {
-        setProjects(projects.filter((project) => project.id !== id));
+    api
+      .delete(`/projects/${id}`)
+      .then((resp) => {
+        console.log(resp);
+        /* setProjects(projects.filter((project) => project.id !== id)); */
         setProjectMessage('Projeto removido com sucesso!');
       })
       .catch((err) => console.log(err));

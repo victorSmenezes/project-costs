@@ -1,26 +1,28 @@
 import { useNavigate } from 'react-router-dom';
 
+import { v4 as uuid } from 'uuid';
+
 import ProjectForm from '../../components/Project/ProjectForm';
+import api from '../../services/api';
 import { NewProjectContainer } from './styles';
 
 function NewProject() {
   const navigate = useNavigate();
+  const id = uuid();
 
-  function createPost(project) {
+  async function createPost(project) {
     // initialize cost and services
 
     project.cost = 0;
     project.services = [];
 
-    fetch('http://localhost:5000/projects', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify(project)
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
+    api
+      .post('/projects', {
+        id,
+        ...project
+      })
+      .then((resp) => {
+        console.log(resp.data);
         // redirect
         navigate('/projects', {
           state: { message: 'Projeto criado com sucesso!' }

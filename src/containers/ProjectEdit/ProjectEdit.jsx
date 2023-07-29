@@ -8,6 +8,7 @@ import ServiceCard from '../../components/Service/ServiceCard';
 import ServiceForm from '../../components/Service/ServiceForm';
 import Loading from '../../layout/Loading/Loading';
 import Message from '../../layout/Message/Message';
+import api from '../../services/api';
 import {
   Button,
   Container,
@@ -27,19 +28,15 @@ export default function ProjectEdit() {
   const [type, setType] = useState();
 
   const { id } = useParams();
+  console.log(id);
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
-        method: 'GEt',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then((resp) => resp.json())
-        .then((data) => {
-          setProject(data);
-          setServices(data.services);
+      api
+        .get(`/projects/${id}`)
+        .then((resp) => {
+          setProject(resp.data);
+          setServices(resp.data.services);
         })
         .catch((err) => console.log(err));
     }, 300);
@@ -54,16 +51,12 @@ export default function ProjectEdit() {
       return false;
     }
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(project)
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProject(data);
+    api
+      .patch(`/projects/${project.id}`, {
+        ...project
+      })
+      .then((resp) => {
+        setProject(resp.data);
         setShowProjectForm(false);
         setMessage('Projeto atualizado!');
         setType('Success');
