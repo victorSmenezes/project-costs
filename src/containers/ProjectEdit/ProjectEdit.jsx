@@ -28,15 +28,16 @@ export default function ProjectEdit() {
   const [type, setType] = useState();
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     setTimeout(() => {
       api
         .get(`/projects/${id}`)
-        .then((resp) => {
-          setProject(resp.data);
-          setServices(resp.data.services);
+        .then((resp) => resp.data.project)
+        .then((project) => {
+          console.log(project);
+          setProject(project);
+          setServices(project.services);
         })
         .catch((err) => console.log(err));
     }, 300);
@@ -89,15 +90,11 @@ export default function ProjectEdit() {
 
     // Update project
 
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(project)
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
+    api
+      .patch(`/projects/${project.id}`, {
+        ...project
+      })
+      .then((resp) => {
         setShowServiceForm(false);
       })
       .catch((err) => console.log(err));
