@@ -12,7 +12,7 @@ export const ContainerStart = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 590px;
+  max-height: 590px;
   overflow-y: scroll;
 `;
 export const NoProjects = styled.p`
