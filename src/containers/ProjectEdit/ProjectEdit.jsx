@@ -111,14 +111,9 @@ export default function ProjectEdit() {
     projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost);
 
     setMessage('');
-    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(projectUpdated)
-    })
-      .then((resp) => resp.json())
+    api
+      .patch(`/projects/${projectUpdated.id}`, projectUpdated)
+      .then((resp) => resp)
       .then((data) => {
         setProject(projectUpdated);
         setServices(serviceUpdated);
