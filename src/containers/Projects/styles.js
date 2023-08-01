@@ -12,7 +12,7 @@ export const ContainerStart = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  max-height: 590px;
+  max-height: 690px;
   overflow-y: scroll;
 `;
 export const NoProjects = styled.p`
@@ -106,6 +106,7 @@ export const ActionsCards = styled.div`
   margin-top: 1.2em;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 
   a,
   button {

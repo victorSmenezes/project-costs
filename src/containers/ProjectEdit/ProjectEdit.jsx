@@ -35,7 +35,6 @@ export default function ProjectEdit() {
         .get(`/projects/${id}`)
         .then((resp) => resp.data.project)
         .then((project) => {
-          console.log(project);
           setProject(project);
           setServices(project.services);
         })
@@ -57,7 +56,7 @@ export default function ProjectEdit() {
         ...project
       })
       .then((resp) => {
-        setProject(resp.data);
+        setProject(project);
         setShowProjectForm(false);
         setMessage('Projeto atualizado!');
         setType('Success');
@@ -94,7 +93,7 @@ export default function ProjectEdit() {
       .patch(`/projects/${project.id}`, {
         ...project
       })
-      .then((resp) => {
+      .then((data) => {
         setShowServiceForm(false);
       })
       .catch((err) => console.log(err));
