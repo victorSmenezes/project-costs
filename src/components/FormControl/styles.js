@@ -1,4 +1,22 @@
-import { styled } from 'styled-components';
+import { keyframes, styled } from 'styled-components';
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideh1 = keyframes`
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
 
 export const FormControl = styled.div`
   display: flex;
@@ -9,6 +27,7 @@ export const FormControl = styled.div`
     margin-bottom: 0.6em;
     font-size: 18px;
     font-weight: bold;
+    animation: ${slideIn} 1s ease-out;
   }
 
   input,
@@ -17,6 +36,7 @@ export const FormControl = styled.div`
     padding: 0.7em;
     border-radius: 0;
     border: none;
+    animation: ${slideh1} 1s ease-out;
 
     &::placeholder {
       color: #7b7b7b;

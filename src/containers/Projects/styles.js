@@ -1,6 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 // Project
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideh1 = keyframes`
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
 
 export const Content = styled.section`
   width: 1300px;
@@ -31,11 +49,29 @@ export const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 2em;
+
+  h1 {
+    animation: ${slideIn} 1.5s ease-out;
+  }
+
+  a {
+    animation: ${slideh1} 1.5s ease-out;
+  }
 `;
 
 // Project Card
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 export const Cards = styled.div`
+  animation: ${fadeIn} 1.8s ease-out;
   padding: 1em;
   border: 1px solid #7a7a7a;
   border-radius: 5px;

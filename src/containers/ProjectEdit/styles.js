@@ -1,4 +1,32 @@
-import { styled } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const scale = keyframes`
+  from{
+    transform:scale(0)
+  }
+  
+  to{
+    transform:scale(1)
+    }
+`;
+
+const slideIn = keyframes`
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
+
+const slideh1 = keyframes`
+  from {
+    transform: translatex(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+`;
 
 export const Container = styled.div`
   width: 1200px;
@@ -37,6 +65,14 @@ export const DetailsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  h1 {
+    animation: ${slideIn} 1.5s ease-out;
+  }
+
+  button {
+    animation: ${slideh1} 1s ease-out;
+  }
 `;
 
 export const ServiceFormContainer = styled.div`
@@ -46,6 +82,7 @@ export const ServiceFormContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  animation: ${scale} 1.8s ease-in-out;
 `;
 
 export const Button = styled.button`
@@ -66,12 +103,17 @@ export const Button = styled.button`
 
 export const ProjectInfo = styled.div`
   width: 100%;
+  animation: ${scale} 1.8s ease-in-out;
+
+  button {
+    animation: ${slideh1} 0.8s ease-in-out;
+  }
 `;
 
 export const ContainerServices = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 330px;
+  max-height: 430px;
   overflow-y: scroll;
 `;
