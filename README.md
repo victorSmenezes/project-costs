@@ -2,7 +2,7 @@
 
 ## <p>Um gerenciador de projetos.</p>
 <p>Crie os seus projetos, e os gerencie, tenha total controle sobre orçamento e categoria do projeto!</p>
-<p>Adicione serviços ao projeto, e veja o quanto resta do seu orçamento para novos serviços</p>
+<p>Adicione serviços ao projeto, e veja o quanto resta do seu orçamento para novos serviços.</p>
 
 
 ## Functionalities
@@ -36,7 +36,9 @@ Tenha em mente que os valores do serviço não ultrapasse o orçamento, caso ult
 
 ## 🔖 Deploy
 
-> (Página Off)
+> [Project Costs](https://project-costs-eta.vercel.app/)
+
+
 
 ## 🔖 Layout
 
@@ -62,6 +64,33 @@ Este projeto foi desenvolvido usando as seguintes tecnologias e ferramentas:
 
 ## 🗃 DataBase and API's
 
-- Fake-API - json-server
+- Project-Cost-API: https://github.com/victorSmenezes/project-costs-API
+- MongoDB
 
-Sendo ultilizado como servidor backend e banco de dados, os dados são salvos no próprio arquivo.
+
+# Começando 🤖
+Para clonar e executar este aplicativo, você precisará de Git e Node.js (que vem com npm) instalado em seu computador. Na sua linha de comando:
+
+## Clone este repositório
+```bash
+$ git clone https://github.com/victorSmenezes/project-costs.git
+
+# Acesse a pasta do projeto
+$ cd project-costs
+
+# Instale as dependências
+$ npm install 
+# or
+$ yarn add install
+```
+
+## Execute o projeto 📎 
+```bash
+$ npm run dev
+# or
+$ yarn dev
+# or
+$ pnpm dev
+```
+
+Abra [http://localhost:5173](http://localhost:5173) no seu navegador e veja o projeto rodando.
